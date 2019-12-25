@@ -56,7 +56,7 @@ function csv2Array(str) {
               type: "linear", 
               position: "left",
               ticks: {
-                  max: 30,
+                  max: 20,
                   min: 0,
                   stepSize: 5
               }
