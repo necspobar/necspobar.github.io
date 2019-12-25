@@ -46,7 +46,7 @@ function csv2Array(str) {
       data: {
         labels: tmpLabels,
         datasets: [
-          { label: "Number of People", data: tmpData, borderColor	: "gray" }
+          { label: "滞在人数", data: tmpData, borderColor	: "gray" }
         ]
       },
       options: {
