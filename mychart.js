@@ -48,6 +48,20 @@ function csv2Array(str) {
         datasets: [
           { label: "Number of People", data: tmpData, borderColor	: "gray" }
         ]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+              id: "人数",
+              type: "linear", 
+              position: "left",
+              ticks: {
+                  max: 30,
+                  min: 0,
+                  stepSize: 5
+              }
+          }]
+        }
       }
     });
   }
