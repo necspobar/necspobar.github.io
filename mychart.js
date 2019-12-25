@@ -47,11 +47,10 @@ function csv2Array(str) {
         labels: tmpLabels,
         datasets: [
           { label: "Number of People", data: tmpData, borderColor	: "gray" },
-        ]
-      }
+        ]}
+
     });
-  }
-  
+
   function main() {
     // 1) ajaxでCSVファイルをロード
     var req = new XMLHttpRequest();
