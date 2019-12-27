@@ -21,24 +21,14 @@ function csv2Array(str) {
   function drawBarChart(data) {
     // 3)chart.jsのdataset用の配列を用意
     var tmpLabels = [], tmpData = [];
-    var time = new Date(Date.parse(data[data.length - 5][1]));
-    var t1 =  toDoubleDigits(time.getHours()) + ":" + toDoubleDigits(time.getMinutes());
-    tmpLabels.push(t1);
-    var time = new Date(Date.parse(data[data.length - 4][1]));
-    var t2 =  toDoubleDigits(time.getHours()) + ":" + toDoubleDigits(time.getMinutes());
-    tmpLabels.push(t2);
-    var time = new Date(Date.parse(data[data.length - 3][1]));
-    var t3 =  toDoubleDigits(time.getHours()) + ":" + toDoubleDigits(time.getMinutes());
-    tmpLabels.push(t3);
-    var time = new Date(Date.parse(data[data.length - 2][1]));
-    var t4 =  toDoubleDigits(time.getHours()) + ":" + toDoubleDigits(time.getMinutes());
-    tmpLabels.push(t4);
-    tmpData.push(data[data.length - 5][2])
-    tmpData.push(data[data.length - 4][2])
-    tmpData.push(data[data.length - 3][2])
-    tmpData.push(data[data.length - 2][2])
-
-  
+    var step = data.length - 1
+    for (var i = 0; i < step; i++) {
+      var tmp = data.pop()
+      console.log(tmp[1])
+      var time = new Date(Date.parse(tmp[1]));
+      tmpLabels.unshift(toDoubleDigits(time.getHours()) + ":" + toDoubleDigits(time.getMinutes()));
+      tmpData.unshift(tmp[2]);
+    }  
     // 4)chart.jsで描画
     var ctx = document.getElementById("myChart").getContext("2d");
     var myChart = new Chart(ctx, {
