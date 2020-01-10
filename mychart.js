@@ -24,7 +24,7 @@ function csv2Array(str) {
     var step = data.length - 1
     for (var i = 0; i < step; i++) {
       var tmp = data.pop()
-      console.log(tmp[1])
+      //console.log(tmp[1])
       var time = new Date(Date.parse(tmp[1]));
       tmpLabels.unshift(toDoubleDigits(time.getHours()) + ":" + toDoubleDigits(time.getMinutes()));
       tmpData.unshift(tmp[2]);
@@ -46,7 +46,7 @@ function csv2Array(str) {
               type: "linear", 
               position: "left",
               ticks: {
-                  max: 40,
+                //max: 60,
                   min: 0,
                   stepSize: 5
               }
