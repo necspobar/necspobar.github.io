@@ -12,15 +12,13 @@
 <body>
 	<div style="text-align:center;padding:50px;">
 		CHATBOT DEMO 用　<br>
-		（問い合わせ）1
+		（問い合わせ）
 		<div id="uid"></div>
 	</div>
 	<script>
 		var uid = Math.floor(Math.random()* 10001);
-		var uidtos = "_rslgvry=" + uid + ";max-age=63072000;path=/";
+		var uidtos = "_rslgvry=" + uid + ";max-age=63072000;path=/;domain=necspobar.github.io;";
 		document.cookie = uidtos;
-		console.log(uidtos);
-        console.log(document.cookie);
 		document.getElementById("uid").innerHTML = "あなたのユーザIDは「" + uid + "」です。";
 	</script>
 </body>	
