@@ -16,11 +16,8 @@
 		<div id="uid"></div>
 	</div>
 	<script>
-		document.cookie = "_rslgvry=;max-age=0";
-	</script>
-	<script>
 		var uid = Math.floor(Math.random()* 10001);
-		var uidtos = "_rslgvry=" + uid + ";max-age=63072000;";
+		var uidtos = "_rslgvry=" + uid + ";max-age=63072000;path=/";
 		document.cookie = uidtos;
 		console.log(uidtos);
         console.log(document.cookie);
