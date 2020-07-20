@@ -2,33 +2,31 @@
 <html lang="jp">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>問い合わせ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問い合わせ</title>
 </head>
 
 <body>
-	<div style="text-align:center;padding:50px;">
-		CHATBOT DEMO 用　<br>
-		（問い合わせ）1
-		<div id="before_cookie" style="font-size: 12px;"></div>
-		<br>
-		<div id="after_cookie" style="font-size: 12px;"></div>
-	</div>
-	<script>
-		document.getElementById("before_cookie").innerHTML = document.cookie.split(";");
-	</script>
-	<script>!function () { !function (t, e, n) { (t.NanalyticsObject = n) in t || (t[n] = function () { (t[n].q = t[n].q || []).push(arguments) }, t[n].ep = e); var a = t.document.getElementsByTagName("script")[0], o = t.document.createElement("script"), i = 1e17 * Math.random(); o.type = "text/javascript", o.async = !0, o.src = "https://sdk." + e + "/v1/web.js?sid=" + i, a.parentNode.insertBefore(o, a) }(window, "n-analytics.io", "Nanalytics"); var t = "_rslgvry", e = "_rslgvry_conv_cnt", n = /^((?!chrome|android|crios).)*safari/i.test(navigator.userAgent); function a(t) { var e = null, n = t + "=", a = document.cookie, o = a.indexOf(n); if (-1 != o) { var i = o + n.length, r = a.indexOf(";", i); -1 == r && (r = a.length), e = decodeURIComponent(a.substring(i, r)) } return e } var o = function () { var e = n ? localStorage.getItem(t) : a(t); e || (e = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (t) { var e = 16 * Math.random() | 0; return ("x" == t ? e : 3 & e | 8).toString(16) }), n ? localStorage.setItem(t, e) : function t(e, n, o, i) { var r = n + "=" + o + ";max-age=" + (i || 63072e3) + ";path=/;"; if (t.domain) e.cookie = r + "domain=." + t.domain; else { var c = location.hostname.split("."); c.length > 2 && c.shift(), t.domain = c.join("."), e.cookie = r + "domain=." + t.domain, a(n) != o && (t.domain = location.hostname, e.cookie = r + "domain=." + t.domain) } }(document, t, e, 63072e3)); return e }(); Nanalytics("setup", "NA-201", (new Date).getTime()), Nanalytics("config", "itp_recovery", !0), Nanalytics("send", "pageview", { customer_id: o, app_unique_id: "77845636731e4143ba6404af1021ff87", chatbot_talk: ((n ? localStorage.getItem(e) : a(e)) || 0).toString() }) }();</script>
-	<script src="https://synalio.com/api/chatbox?appid=77845636731e4143ba6404af1021ff87" type="text/javascript"></script>
-	<script>
-		document.getElementById("after_cookie").innerHTML = document.cookie.split(";");
-	</script>
-	<script>
-		var uid = Math.floor(Math.random() * 10001);
-		var uidtos = "_rslgvry=" + uid + ";max-age=63072000;path=/;domain=necspobar.github.io";
-		document.cookie = uidtos;
-	</script>
-</body>	
+    <div style="text-align:center;padding:50px;">
+        CHATBOT DEMO 用　<br>
+        （問い合わせ）
+    </div>
+
+    <div id="uid"></div>
+
+    <script>!function () { !function (t, e, n) { (t.NanalyticsObject = n) in t || (t[n] = function () { (t[n].q = t[n].q || []).push(arguments) }, t[n].ep = e); var a = t.document.getElementsByTagName("script")[0], o = t.document.createElement("script"), i = 1e17 * Math.random(); o.type = "text/javascript", o.async = !0, o.src = "https://sdk." + e + "/v1/web.js?sid=" + i, a.parentNode.insertBefore(o, a) }(window, "n-analytics.io", "Nanalytics"); var t = "_rslgvry", e = "_rslgvry_conv_cnt", n = /^((?!chrome|android|crios).)*safari/i.test(navigator.userAgent); function a(t) { var e = null, n = t + "=", a = document.cookie, o = a.indexOf(n); if (-1 != o) { var i = o + n.length, r = a.indexOf(";", i); -1 == r && (r = a.length), e = decodeURIComponent(a.substring(i, r)) } return e } var o = function () { var e = n ? localStorage.getItem(t) : a(t); e || (e = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (t) { var e = 16 * Math.random() | 0; return ("x" == t ? e : 3 & e | 8).toString(16) }), n ? localStorage.setItem(t, e) : function t(e, n, o, i) { var r = n + "=" + o + ";max-age=" + (i || 63072e3) + ";path=/;"; if (t.domain) e.cookie = r + "domain=." + t.domain; else { var c = location.hostname.split("."); c.length > 2 && c.shift(), t.domain = c.join("."), e.cookie = r + "domain=." + t.domain, a(n) != o && (t.domain = location.hostname, e.cookie = r + "domain=." + t.domain) } }(document, t, e, 63072e3)); return e }(); Nanalytics("setup", "NA-201", (new Date).getTime()), Nanalytics("config", "itp_recovery", !0), Nanalytics("send", "pageview", { customer_id: o, app_unique_id: "77845636731e4143ba6404af1021ff87", chatbot_talk: ((n ? localStorage.getItem(e) : a(e)) || 0).toString() }) }();</script>
+    <script src="https://synalio.com/api/chatbox?appid=77845636731e4143ba6404af1021ff87"
+        type="text/javascript"></script>
+
+    <script>
+        var uid = Math.floor(Math.random() * 10001);
+        var uid_to_synalio = "_rslgvry=" + uid + ";max-age=63072000;path=/;domain=necspobar.github.io";
+        document.cookie = uid_to_synalio;
+        localStorage.setItem('_rslgvry',uid);
+        document.getElementById("uid").innerText = uid;
+    </script>
+</body>
 </body>
 
 </html>
