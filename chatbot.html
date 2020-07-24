@@ -32,10 +32,10 @@
         };
 
         const uid = getNowStr() + "_[USERID]";
-        document.cookie = "_rslgvry=" + uid + ";max-age=63072000;path=/;domain=necspobar.github.io";
-        document.cookie = "__na_p_t=0;max-age=63072000;path=/;domain=necspobar.github.io";
-        localStorage.setItem('_rslgvry', uid);
-        localStorage.setItem("closeWindowChat");
+        try { document.cookie = "_rslgvry=" + uid + ";max-age=63072000;path=/;domain=necspobar.github.io"; } catch {};
+        try { document.cookie = "__na_p_t=0;max-age=63072000;path=/;domain=necspobar.github.io"; } catch {};
+        try { localStorage.setItem('_rslgvry', uid); } catch {};
+        try { localStorage.setItem("closeWindowChat"); } catch {};
 
         document.getElementById("uid").innerText = uid;
     </script>
