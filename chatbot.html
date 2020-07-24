@@ -20,11 +20,23 @@
         type="text/javascript"></script>
 
     <script>
-        //var uid = Math.floor(Math.random() * 10001);
-        const uid = 12345; 
-        const uid_to_synalio = "_rslgvry=" + uid + ";max-age=63072000;path=/;domain=necspobar.github.io";
-        document.cookie = uid_to_synalio;
-        //localStorage.setItem('_rslgvry',uid);
+        const getNowStr = () => {
+            const date = new Date();
+            const Y = date.getFullYear();
+            const M = ("00" + (date.getMonth() + 1)).slice(-2);
+            const D = ("00" + date.getDate()).slice(-2);
+            const H = ("00" + date.getHours()).slice(-2);
+            const m = ("00" + date.getMinutes()).slice(-2);
+            const s = ("00" + date.getSeconds()).slice(-2);
+            return Y + M + D + H + m + s;
+        };
+
+        const uid = getNowStr() + "_[USERID]";
+        document.cookie = "_rslgvry=" + uid + ";max-age=63072000;path=/;domain=necspobar.github.io";
+        document.cookie = "__na_p_t=0;max-age=63072000;path=/;domain=necspobar.github.io";
+        localStorage.setItem('_rslgvry', uid);
+        localStorage.setItem("closeWindowChat");
+
         document.getElementById("uid").innerText = uid;
     </script>
 </body>
