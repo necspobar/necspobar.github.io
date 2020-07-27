@@ -31,11 +31,12 @@
             return Y + M + D + H + m + s;
         };
 
-        const uid = getNowStr() + "_[USERID]";
+        //const uid = getNowStr() + "_[USERID]";
+        const uid = "[USERID]";
         try { document.cookie = "_rslgvry=" + uid + ";max-age=63072000;path=/;domain=necspobar.github.io"; } catch {};
         try { document.cookie = "__na_p_t=0;max-age=63072000;path=/;domain=necspobar.github.io"; } catch {};
-        try { localStorage.setItem('_rslgvry', uid); } catch {};
-        try { localStorage.setItem("closeWindowChat"); } catch {};
+        //try { localStorage.setItem('_rslgvry', uid); } catch {};
+        //try { localStorage.setItem("closeWindowChat"); } catch {};
 
         document.getElementById("uid").innerText = uid;
     </script>
