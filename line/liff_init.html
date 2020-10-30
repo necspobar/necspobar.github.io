@@ -26,7 +26,7 @@
                 ${liff.getIDToken()}
             `
             liff.getProfile().then((res) => {
-                document.getElementById("2").innerText = res;
+                document.getElementById("2").innerText = JSON.parse(res);
             }).catch((err) => {
                 console.log("hogehoge")
             })
