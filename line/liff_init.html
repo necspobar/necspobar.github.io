@@ -12,7 +12,7 @@
     <div>liff_init_test</div>
     <div id="1"></div>
     <div id="2"></div>
-    <p>1</p>
+    <p>2</p>
 
     <script>
         // Promiseオブジェクトを使用する方法
@@ -27,7 +27,7 @@
                 ${liff.getIDToken()}
             `
             liff.getProfile().then((res) => {
-                document.getElementById("2").innerText = JSON.parse(res);
+                document.getElementById("2").innerText = "profille:" + JSON.parse(res);
             }).catch((err) => {
                 console.log("hogehoge")
             })
