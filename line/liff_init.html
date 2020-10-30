@@ -13,7 +13,7 @@
     <div id="1"></div>
     <div id="2"></div>
     <p>2</p>
-
+    <button id="openWindowButton">BTN</button>
     <script>
         // Promiseオブジェクトを使用する方法
         liff.init({
@@ -31,6 +31,13 @@
             }).catch((err) => {
                 document.getElementById("2").innerText = "ERROR2";
             })
+            // openWindow call
+            document.getElementById('openWindowButton').addEventListener('click', function () {
+                liff.openWindow({
+                    url: 'https://www.google.com',
+                    external: true
+                });
+            });
         }).catch((err) => {
             // Error happens during initialization
             console.log(err.code, err.message);
