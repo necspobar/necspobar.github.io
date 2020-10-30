@@ -10,6 +10,23 @@
 
 <body>
     <div>liff_init_test</div>
+
+    <script>
+        // Promiseオブジェクトを使用する方法
+        liff
+            .init({
+                liffId: "1655193965-8gxR9Y0p" // Use own liffId
+            })
+            .then(() => {
+                // Start to use liff's api
+            })
+            .catch((err) => {
+                // Error happens during initialization
+                console.log(err.code, err.message);
+            });
+        // コールバックを使用する方法
+        liff.init({ liffId: "1655193965-8gxR9Y0p" }, successCallback, errorCallback);
+    </script>
 </body>
 
 </html>
