@@ -11,13 +11,13 @@
 <body>
     <div>liff_init_test</div>
     <div id="1"></div>
+    <div id="2"></div>
 
     <script>
         // Promiseオブジェクトを使用する方法
-        liff
-            .init({
-                liffId: "1655193965-8gxR9Y0p" // Use own liffId
-            })
+        liff.init({
+            liffId: "1655193965-8gxR9Y0p" // Use own liffId
+        })
             .then(() => {
                 // Start to use liff's api
                 console.log(liff.getOS())
@@ -25,12 +25,17 @@
                     ${liff.getOS()}
                     ${liff.isInClient()}
                     ${liff.getIDToken()}
-                    ${liff.getProfile()}`
-            })
-            .catch((err) => {
-                // Error happens during initialization
-                console.log(err.code, err.message);
-            });
+                `
+                liff.getProfile()
+                    .then((res) => {
+                        document.getElementById("2").innerText = res;
+                    }).catch((err) => {
+                        console.log(err)
+                    }
+            .catch ((err) => {
+                    // Error happens during initialization
+                    console.log(err.code, err.message);
+                });
     </script>
 </body>
 
