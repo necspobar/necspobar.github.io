@@ -27,9 +27,9 @@
                 ${liff.getIDToken()}
             `
             liff.getProfile().then((res) => {
-                document.getElementById("2").innerText = "profille:" + JSON.parse(res);
+                document.getElementById("2").innerText = JSON.parse(res);
             }).catch((err) => {
-                console.log("hogehoge")
+                document.getElementById("2").innerText = "ERROR2";
             })
         }).catch((err) => {
             // Error happens during initialization
