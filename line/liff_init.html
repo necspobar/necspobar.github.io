@@ -22,7 +22,7 @@
                 // Start to use liff's api
                 console.log(liff.getOS())
                 const req = document.getElementById("output");
-                req.innerHTML = liff.getOS() + "¥n" + liff.isInClient() + "¥n" + liff.getIDToken() + "¥n" + liff.getContext()
+                req.innerHTML = `{liff.getOS()}¥n{liff.isInClient()}¥n{liff.getIDToken()}¥n{liff.getContext().json()}`
             })
             .catch((err) => {
                 // Error happens during initialization
