@@ -25,8 +25,8 @@
             // Start to use liff's api
             console.log(liff.getOS())
             document.getElementById("device").innerText = `
-                ${liff.getOS()}
-                ${liff.isInClient()}
+                "使用OS："${liff.getOS()}
+                "LINE上か？"${liff.isInClient()}
             `
             liff.getProfile().then((res) => {
                 document.getElementById("profile").innerText = JSON.stringify(res);
