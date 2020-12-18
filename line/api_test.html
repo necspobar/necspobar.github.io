@@ -31,7 +31,7 @@
             liff.getProfile().then((res) => {
                 document.getElementById("profile").innerText = JSON.stringify(res);
             }).catch((err) => {
-                document.getElementById("profile").innerText = "ERROR2";
+                document.getElementById("profile").innerText = "LINEプロフィール情報を取得できません。";
             })
         }).catch((err) => {
             // Error happens during initialization
