@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <title>EXTERNAL_WINDOW_TEST</title>
+</head>
+
+<body>
+    <div>
+        <div>マルチアングル動画</div>
+        <a href="#" id="openWindowButton">外部ブラウザで開く</a><br>
+        <a href="https://smartstream.jp/nttw/20th/player/demo01.html">LIFFブラウザで開く</a>
+    </div>
+    <script>
+        // openWindow call
+        document.getElementById('openWindowButton').addEventListener('click', function () {
+            liff.openWindow({
+                url: 'https://smartstream.jp/nttw/20th/player/demo01.html',
+                external: true
+            });
+        });
+    </script>
+</body>
+
+</html>
